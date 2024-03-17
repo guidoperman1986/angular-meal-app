@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { MealService } from './services/meal.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,12 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'mealApp';
+  mealService = inject(MealService)
+
+  ngOnInit(): void {
+      this.mealService.getIngredientsList().subscribe(data=>console.log(data))
+  }
+
 }
