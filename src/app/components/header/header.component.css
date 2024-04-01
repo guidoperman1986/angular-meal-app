@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+#btn-categories {
+  border: none;
+}
+
+a.dropdown-item:hover {
+  background-color: #FF642F;
+  color: #fff;
+}
