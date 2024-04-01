@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   mealService = inject(MealService)
 
   ngOnInit(): void {
-      this.mealService.getIngredientsList().subscribe(data=>console.log(data))
+      /* this.mealService.getIngredientsList().subscribe(data=>console.log(data)) */
   }
 
 }

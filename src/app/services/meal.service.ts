@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Category } from '../interfaces/categories.interface';
+import { Meal } from '../interfaces/meal.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -27,5 +28,9 @@ export class MealService {
 
   getIngredientsList() {
     return this.http.get(`${this.baseUrl}/list.php?i=list`);
+  }
+
+  getRandomMeal(): Observable<Meal> {
+    return this.http.get<{meals: Meal[]}>(`${this.baseUrl}/random.php`).pipe(map(({meals}) => meals[0]));
   }
 }

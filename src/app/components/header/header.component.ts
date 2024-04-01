@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   categories$: Observable<Category[]> = this.mealService.getCategories()
 
   ngOnInit(): void {
-      this.categories$.subscribe(data=>console.log(data))
+      /* this.categories$.subscribe(data=>console.log(data)) */
   }
 
 }
