@@ -39,3 +39,17 @@
 .progress:nth-child(3) {
   animation-delay: 1.7s;
 }
+
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in-animation 1s ease-in
+}

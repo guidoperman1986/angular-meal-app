@@ -1,7 +1,7 @@
 <figure class="my-3 tstbite-card">
   <a class="rounded-6 meal-img">
     @defer (on viewport; when meal.strMealThumb !== '') {
-    <img [src]="meal.strMealThumb" class="w-75 h-75" alt="Menu" />
+    <img [src]="meal.strMealThumb" class="w-75 h-75 fade-in" alt="Menu" />
     } @placeholder (minimum 3s) {
     <app-loading></app-loading>
     }
