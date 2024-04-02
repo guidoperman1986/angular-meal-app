@@ -1,18 +1,10 @@
-.meal-img {
-  cursor: pointer;
-}
-
-.meal-name {
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .load {
   display: flex;
   border-radius: 50%;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
 
 .progress {
@@ -21,8 +13,8 @@
   margin: 0.4em;
   scale: 0;
   border-radius: 50%;
-  background: rgb(255, 255, 255);
-  animation: loading_492 2s ease infinite;
+  background: rgb(238, 124, 229);
+  animation: loading_492 1s ease infinite;
   animation-delay: 1s;
 }
 
@@ -33,9 +25,9 @@
 }
 
 .progress:nth-child(2) {
-  animation-delay: 1.3s;
+  animation-delay: 1s;
 }
 
 .progress:nth-child(3) {
-  animation-delay: 1.7s;
+  animation-delay: 1.3s;
 }
