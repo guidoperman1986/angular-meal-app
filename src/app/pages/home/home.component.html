@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container">
+  <div class="row mx-auto text-center d-flex" style="margin: 10px auto">
+    @defer (on viewport; when randomMeals.length > 0) { @for (meal of
+    randomMeals; track $index) {
+
+    <app-meal-card class="col-md-4" [meal]="meal"></app-meal-card>
+
+    } } @placeholder (minimum 2s) { 
+      <app-loading></app-loading>
+
+    }
+  </div>
+</div>

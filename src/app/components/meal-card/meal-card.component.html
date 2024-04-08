@@ -1,1 +1,23 @@
-<p>meal-card works!</p>
+<figure class="my-3 tstbite-card">
+  <a class="rounded-6 meal-img">
+    @defer (on viewport; when meal.strMealThumb !== '') {
+    <img
+      [routerLink]="[meal.idMeal]"
+      [src]="meal.strMealThumb"
+      class="w-75 h-75 fade-in"
+      alt="Menu"
+    />
+
+    <figcaption class="mt-2">
+      <span
+        [routerLink]="[meal.idMeal]"
+        class="text-black font-weight-bold meal-name"
+        >{{ meal.strMeal }}</span
+      >
+    </figcaption>
+
+    } @placeholder (minimum 3s) {
+    <app-loading></app-loading>
+    }
+  </a>
+</figure>
